@@ -1,0 +1,37 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Transaction Successful</h1>
+        <p class="confirmation-message">Your transaction has been successfully submitted and verified with a digital signature.</p>
+        <a href="/" class="back-link">Back to Home</a>
+    </div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Transaction Successful</h1>
+        <p class="confirmation-message">Your transaction has been successfully submitted and verified with a digital signature.</p>
+        
+        <a href="/" class="back-link">Back to Home</a>
+        <a href="{{ url_for('transaction_history') }}" class="transaction-history-btn">View Transaction History</a>
+    </div>
+</body>
+</html>
+

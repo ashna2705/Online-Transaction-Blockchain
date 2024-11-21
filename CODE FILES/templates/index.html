@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Transaction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Blockchain Transaction</h1>
+        <form action="/submit_transaction" method="post">
+            <label for="sender">Sender:</label>
+            <input type="text" id="sender" name="sender" placeholder="Enter sender's name" required>
+            
+            <label for="recipient">Recipient:</label>
+            <input type="text" id="recipient" name="recipient" placeholder="Enter recipient's name" required>
+            
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" name="amount" placeholder="Enter amount" required>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="transaction-history-container">
+        <h1>Transaction History</h1>
+        
+        <table class="transaction-table">
+            <thead>
+                <tr>
+                    <th>Block Index</th>
+                    <th>Timestamp</th>
+                    <th>Sender</th>
+                    <th>Recipient</th>
+                    <th>Amount</th>
+                    <!-- <th>Signature</th> -->
+                </tr>
+            </thead>
+            <tbody>
+                {% for transaction in transactions %}
+                <tr>
+                    <td>{{ transaction.block_index }}</td>
+                    <td>{{ transaction.timestamp }}</td>
+                    <td>{{ transaction.sender }}</td>
+                    <td>{{ transaction.recipient }}</td>
+                    <td>{{ transaction.amount }}</td>
+                    <!-- <td>{{ transaction.signature }}</td> -->
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        <!-- Button to go back to the main page -->
+        <div class="button-container">
+            <button class="history-button" onclick="window.location.href='/'">Back to Home</button>
+        </div>
+    </div>
+</body>
+</html>
